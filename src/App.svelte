@@ -50,13 +50,13 @@
 
 <div class="hidden" id="embed"></div>
 
-<a href="https://gcm.schule/" class="fixed cursor-default p-1 m-4 rounded-md hover:bg-gray-200 home-button" title="Startseite">
+<a href="https://gcm.schule/" class="fixed cursor-default p-1 m-4 rounded-md hover:bg-gray-200 home-button" title="startseite">
   <svg viewBox="-2 -2 20 20" height="24" fill="none" stroke="currentColor"><path d="M2,7V16H6V10H10V16H14V7M0,9L8,1 16,9"/></svg>
 </a>
 
-<a class="fixed m-4 font-bold hover:underline decoration-2 brand" href="https://gcm.schule/timer.html" target="_blank" title="in neuem Tab öffnen" data-notrack-target="timer.open_tab">Campus Timer</a>
+<a class="fixed m-4 font-bold hover:underline decoration-2 brand" href="https://gcm.schule/timer.html" target="_blank" title="in neuem tab öffnen" data-notrack-target="timer.open_tab">campustimer</a>
 
-<button class="fixed right-0 p-1 m-4 rounded-md hover:bg-gray-200" on:click={toggle_fullscreen} title="Vollbild">
+<button class="fixed right-0 p-1 m-4 rounded-md hover:bg-gray-200" on:click={toggle_fullscreen} title="vollbild">
   <svg viewBox="-2 -2 20 20" height="24" fill="none" stroke="currentColor"><path d={fullscreen_path}/></svg>
 </button>
 
