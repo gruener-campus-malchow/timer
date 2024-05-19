@@ -87,13 +87,20 @@
 
 <div class="hidden" id="embed"></div>
 
-<a href="https://gcm.schule/" class="fixed cursor-default p-1 m-4 rounded-md hover:bg-gray-200 home-button" title="startseite">
+<a href="https://gcm.schule/"
+   class="fixed cursor-default p-1 m-4 rounded-md hover:bg-gray-200 home-button"
+   title="startseite">
   <svg viewBox="-2 -2 20 20" height="24" fill="none" stroke="currentColor"><path d="M2,7V16H6V10H10V16H14V7M0,9L8,1 16,9"/></svg>
 </a>
 
-<a class="fixed m-4 font-bold hover:underline decoration-2 brand" href="https://gcm.schule/timer/" target="_blank" title="in neuem tab öffnen" data-notrack-target="timer.open_tab">campustimer</a>
+<a class="fixed m-4 font-bold leading-none hover:underline decoration-2 brand"
+   href="https://gcm.schule/timer/"
+   target="_blank"
+   title="in neuem tab öffnen">campustimer</a>
 
-<button class="fixed right-0 p-1 m-4 rounded-md hover:bg-gray-200" on:click={toggle_fullscreen} title="vollbild">
+<button class="fixed right-0 p-1 m-4 rounded-md hover:bg-gray-200"
+        on:click={toggle_fullscreen}
+        title="vollbild">
   <svg viewBox="-2 -2 20 20" height="24" fill="none" stroke="currentColor"><path d={fullscreen_path}/></svg>
 </button>
 
@@ -102,7 +109,8 @@
     <Spinner direction="up" hidden={state === 'running'} on:click={()=>hours++} />
     <Spinner direction="up" hidden={state === 'running'} on:click={()=>minutes++} />
     <Spinner direction="up" hidden={state === 'running'} on:click={()=>seconds++} />
-    <div class="text-5xl sm:text-9xl tabular-nums col-span-3" class:pulse={finished}>{ hours_formatted }:{ minutes_formatted }:{ seconds_formatted }</div>
+    <div class="text-5xl sm:text-9xl tabular-nums leading-none col-span-3"
+         class:pulse={finished}>{ hours_formatted }:{ minutes_formatted }:{ seconds_formatted }</div>
     <Spinner direction="down" hidden={state === 'running'} on:click={()=>hours--} />
     <Spinner direction="down" hidden={state === 'running'} on:click={()=>minutes--} />
     <Spinner direction="down" hidden={state === 'running'} on:click={()=>seconds--} />
@@ -110,13 +118,16 @@
       {#if state === 'initial'}
         <div class="grow basis-0">
           {#each [5,10,15,20,25,30,45,60] as t}
-            <button class="font-bold rounded-md px-2 -mr-1 hover:bg-gray-200 relative hover:z-10 max-sm:hidden" on:click={() => set(0, t, 0)}>{t}</button>
+            <button class="font-bold rounded-md px-2 -mr-1 hover:bg-gray-200 relative hover:z-10 max-sm:hidden"
+                    on:click={() => set(0, t, 0)}>{t}</button>
           {/each}
         </div>
       {:else}
-        <button class="grow basis-0 box-border font-bold rounded-md hover:bg-gray-200" on:click={secondary.action}>{ secondary.text }</button>
+        <button class="grow basis-0 box-border font-bold rounded-md hover:bg-gray-200"
+                on:click={secondary.action}>{ secondary.text }</button>
       {/if}
-      <button class="grow basis-0 box-border font-bold rounded-md hover:bg-gray-200 text-green" on:click={primary.action}>{ primary.text }</button>
+      <button class="grow basis-0 box-border font-bold rounded-md hover:bg-gray-200 text-green"
+              on:click={primary.action}>{ primary.text }</button>
     </div>
   </div>
 </main>
