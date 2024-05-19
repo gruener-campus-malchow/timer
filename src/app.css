@@ -13,6 +13,19 @@ button, [role="button"] {
   }
 }
 
+@layer utilities {
+  .pulse {
+    animation: pulse 1s .2s infinite;
+  }
+  @keyframes pulse {
+    0% { @apply text-transparent }
+    10% { @apply text-green }
+    60% { @apply text-green }
+    70% { @apply text-transparent }
+    100% { @apply text-transparent }
+  }
+}
+
 /*:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
