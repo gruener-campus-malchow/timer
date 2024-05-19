@@ -71,7 +71,7 @@
   function tick() {
     if (finished) seconds ++
     else seconds --
-    if (hours + minutes + seconds === 0) {
+    if (hours === 0 && minutes === 0 && seconds === 0) {
       finish_audio.play()
       finished = true
       primary.text = 'fertig'
